@@ -1,7 +1,7 @@
 require('longjohn');
 
 const async = require('async');
-const format = require('util').format;
+const { format } = require('util');
 const path = require('path');
 const glob = require('glob');
 const os = require('os');

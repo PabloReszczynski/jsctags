@@ -1,7 +1,6 @@
 // Based on defnode.js (https://github.com/sourcegraph/defnode.js)
 
-const walk = require('acorn/dist/walk');
-
+const walk = require('acorn-walk');
 const walkall = require('./walkall');
 
 // FindDefinitionNode takes the start/end position of an Identifier node and

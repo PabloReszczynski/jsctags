@@ -5,8 +5,8 @@ const includes = require('lodash.includes');
 const defaults = require('lodash.defaults');
 const isUndefined = require('lodash.isundefined');
 const get = require('lodash.get');
-const walk = require('acorn/dist/walk');
-const format = require('util').format;
+const walk = require('acorn-walk');
+const { format } = require('util');
 const forceArray = require('force-array');
 const infer = require('tern/lib/infer');
 

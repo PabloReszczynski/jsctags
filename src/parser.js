@@ -1,16 +1,15 @@
-const format = require('util').format;
+const { format } = require('util');
 const isString = require('lodash.isstring');
 const includes = require('lodash.includes');
 const isUndefined = require('lodash.isundefined');
 const isObject = require('lodash.isplainobject');
-const isArray = require('lodash.isarray');
 const isFunction = require('lodash.isfunction');
 const sortBy = require('lodash.sortby');
 const without = require('lodash.without');
 const get = require('lodash.get');
 const objectHash = require('object-hash');
 const clone = require('lodash.clonedeep');
-const uuid = require('node-uuid');
+const uuid = require('uuid');
 const path = require('path');
 
 const condense = require('./condenser');
@@ -327,7 +326,7 @@ Parser.prototype.push = function(tag) {
 
   const span = tag.origin['!span'];
 
-  if (!isArray(this.bySpan[span])) {
+  if (!Array.isArray(this.bySpan[span])) {
     this.bySpan[span] = [];
   }
 
